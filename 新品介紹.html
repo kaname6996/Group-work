@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蘋果綠咖啡</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <script type="text/javascript" >
+            $(document).ready(function()
+            {
+            $("#flip").click(function(){
+            $(".panel").slideToggle("slow");
+            });
+            });
+    </script>
+    
+    <style>
+        body {margin:0px;font-family: 'Noto Serif TC', serif;} /*對齊網頁上緣*/
+
+        /*上方黑線*/
+        .box{background-color: rgb(27, 66, 24);height: 10px;}
+        /*中間圖片*/
+        .pic{margin-left:auto;margin:auto;display:block;margin-bottom: 40px;} /*圖片置中*/
+        
+        /*選單*/
+        header{
+            display:flex;
+            justify-content:center /**/
+            }
+        header>.panel,#flip
+            {
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            }
+        header>.panel
+            {
+            height:120px;
+            display:none;
+            padding:0px;
+            cursor: pointer
+            }
+            
+        .box2{
+            background-color:white;
+            width:10%;height:50px;
+            display:inline-block; /*一行多div*/
+            text-align: center; /*水平對齊*/
+            line-height: 50px; /*置中*/
+            }
+        .box2>a{width: 100%;height: 100%;}
+        .box2:hover{background-color:black;color: white;cursor: pointer;}
+
+        
+        /*漂浮小盒子*/
+        .float>img{width:188px;height: 125px;
+        position:fixed;right: 20px;top:200px}
+
+        /*聯絡方法*/
+        nav{background-color: rgba(165, 150, 150, 0.144);padding-left: 200px;display: flex;}
+        nav>div>img{width:35px;height:35px;margin-left: 10px;margin-top: 60px;}
+        nav>.num{text-align:center;margin-top: 70px;margin-left: 20px;}
+
+        /*底下黑線*/
+        footer{background-color: black;height: 10px;margin-top: 5px;}
+    </style>
+</head>
+<body>
+    <div class="box"></div><!--上邊黑線-->
+
+
+    <header><!--目錄-->
+        <div class="box2" onclick="location.href='index.html'">首頁</div>
+        <div class="box2" id="flip" >全部商品</div>
+        <div class="panel">
+        <p onclick="location.href='全部商品.html'">查看菜單</p>
+        <p onclick="location.href='新品介紹.html'">最新商品</p>
+        </div>
+        <div class="box2" onclick="location.href='門市資訊.html'">門市資訊</div>
+        <div class="box2" onclick="location.href='企業責任.html'">企業責任</div>
+        <div class="box2" onclick="location.href='訂位資訊.html'">訂位資訊</div>
+        <div class="box2" onclick="location.href='加入我們.html'">加入我們</div>
+    </header>
+    <div class="float"><!--漂浮小盒子-->
+        <img src="未命名.png">
+    </div> 
+    <article><!--底圖-->
+    <img class="pic" src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/93044/starb.jpg_1140x855.jpg">
+    </article>
+    <nav> 
+        <div>
+        <img  src="facebook.png">
+        <img  src="instagram.png">
+        <img  src="whatsapp.png">
+        <img  src="youtube.png">
+        </div>
+        <div class="num">連絡電話：04-24562158
+        </div>
+    </nav>
+    <footer></footer>
+</body>
+</html>
