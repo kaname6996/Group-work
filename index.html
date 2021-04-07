@@ -24,7 +24,7 @@
         /*上方黑線*/
         .box{background-color: rgb(27, 66, 24);height: 10px;}
         /*中間圖片*/
-        .pic{margin-left:auto;margin:auto;display:block;margin-bottom: 40px;} /*圖片置中*/
+        .pic{margin-left:auto;margin:auto;display:block;margin-bottom: 40px;width:80vw;height: 100vh;} /*圖片置中*/
         
         /*選單*/
         header{
@@ -54,11 +54,16 @@
             }
         .box2>a{width: 100%;height: 100%;}
         .box2:hover{background-color:black;color: white;cursor: pointer;}
+        .box2>img{width: 50px;height: 50px;}
 
         
-        /*漂浮小盒子*/
-        .float>img{width:188px;height: 125px;
-        position:fixed;right: 10px;top:200px}
+        /*漂浮小盒子1*/
+        .float>img{width:219px;height: 121px;
+        position:fixed;right: 10px;top:500px;opacity: 0.8;}
+
+        /*漂浮小盒子2*/
+        .float2>img{width:140px;height:140px;
+        position:absolute;left: 0px;top:10px;opacity: 0.8;}
 
 
         /*圖片(會變大變小的)*/
@@ -136,11 +141,14 @@
         <div class="box2" onclick="location.href='訂位資訊.html'">訂位資訊</div>
         <div class="box2" onclick="location.href='加入我們.html'">加入我們</div>
     </header>
-    <div class="float"><!--漂浮小盒子-->
+    <div class="float"><!--漂浮小盒子1-->
         <img src="未命名.png">
     </div> 
+    <div class="float2"><!--漂浮小盒子2-->
+        <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/67671346_2507707969279641_6272034196542193664_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=7YsKk72yz3IAX9Lfp_J&_nc_ht=scontent-tpe1-1.xx&oh=3017f0dbcf75933a3019646cc4e1d512&oe=60919B8D">
+    </div> 
     <article><!--正中圖片-->
-    <img class="pic" src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/93044/starb.jpg_1140x855.jpg">
+    <img class="pic" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/95365671_3106070826110016_2908975856317628416_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=e3f864&_nc_ohc=omuq9fPxB6UAX8pCNmx&_nc_ht=scontent-tpe1-1.xx&oh=2a029ce1ac220823542ddd0a54c06e29&oe=60912F06">
     </article>
 
 
