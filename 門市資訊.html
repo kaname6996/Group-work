@@ -7,10 +7,12 @@
     <title>蘋果綠咖啡</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
-    <!--放大鏡-->
-    <script src="js/jquery.elevatezoom.min.js"></script>
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <!--放大鏡-->
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="jquery.elevatezoom.min.js"></script>
+
     <script type="text/javascript" >
             $(document).ready(function()
             {
@@ -61,7 +63,7 @@
         /*門市名字*/
         article>div>h2{padding-left: 80px;}
 
-        article{display: flex;flex-direction:column}
+        article{display: flex;flex-direction:column;justify-content: space-around;}
 
 
         /*選單*/
@@ -131,11 +133,13 @@
     </header>
     <div class="float"><!--漂浮小盒子-->
         <img src="未命名.png">
-    </div> 
+    </div>
+
     <article><!--地圖+門市資料-->
+        
         <div>
             <h2 id="01">O1門市</h2>
-            <img src="黎明店小.jpg" >
+            <img  id="zoom_02" src="黎明店小.jpg" data-zoom-image="黎明店.jpg">
             <div class="address">
                 門市名稱：OOOO </br>
                 門市電話：OOOO-OOOO </br>
@@ -166,6 +170,20 @@
         </div>
 
     </article>
+    <!--放大鏡-->
+    <script>
+		function zoom(element, type, custors) {
+			element.elevateZoom({
+				zoomType: type,
+				cursor: custors,
+				zoomWindowFadeIn: 500,
+				zoomWindowFadeOut: 750
+			});
+		}
+		zoom($('#zoom_02'), "window", "crosshair");
+	</script>   
+    
+    
     <nav> 
         <div>
         <img  src="facebook.png">
