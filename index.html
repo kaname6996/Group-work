@@ -17,6 +17,8 @@
             });
             });
     </script>
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
 <style>
         body {margin:0px;font-family: 'Noto Serif TC', serif;} /*對齊網頁上緣*/
@@ -58,23 +60,24 @@
 
         
         /*漂浮小盒子1*/
-        .float>img{width:219px;height: 121px;
-        position:fixed;right: 10px;top:500px;opacity: 0.8;}
+        .float>img{width:58px;height:432px;
+        position:fixed;right: 10px;top:60px}
 
         /*漂浮小盒子2*/
-        .float2>img{width:140px;height:140px;
-        position:absolute;left: 0px;top:10px;opacity: 0.8;}
+        .float2>img{width:130px;height:130px;
+        position:absolute;left: 10px;top:20px;;}
 
 
-        /*圖片(會變大變小的)*/
-        section{display: inline-flex;
+        /*底下小圖片*/
+        section{display: flex;
         flex-direction:row;
         flex-wrap:nowrap;
         justify-content:center;
-        overflow:hidden}
+        text-align: center;
+        }
 
-        section>img{width: 100px;height: 100px;
-        margin-left: 100px;margin-bottom: 20px;
+        section>img{width: 150px;height: 100px;
+        margin-left: 15px;margin-bottom: 20px;
         overflow:hidden}
 
         
@@ -86,43 +89,6 @@
         /*底下黑線*/
         footer{background-color: black;height: 10px;margin-top: 5px;}
     </style>
-
-    
-    <script type="text/javascript">
-        function 
-        show(no)
-        {
-        var box=document.getElementById("box"+no);
-        var boxstyle=window.getComputedStyle(box) //取得當前的尺寸設定
-        var size=boxstyle.getPropertyValue("width") //取的哪一個CSS屬性 得到50px寬度設定
-        size=parseInt(size) //轉換成數值 :50px>50
-        var animed=window.setInterval(//產生一個放大的動畫特效:setInterval排程+(1)函式(2)執行間隔時間
-        function(){
-        //設定停止條件
-        if (size>150){window.clearInterval(animed);return} //排程IDanimed 清除排程
-        size++; //數值調完後放進css設定中
-        box.style.width=size+"px";
-        box.style.height=size+"px";
-        },1)  //每0.02秒執行一次函式
-        }
-
-        function showout(no)
-        {
-        var box=document.getElementById("box"+no);
-        var boxstyle=window.getComputedStyle(box) //取得當前的尺寸設定
-        var size=boxstyle.getPropertyValue("width") //取的哪一個CSS屬性 得到50px寬度設定
-        size=parseInt(size) //轉換成數值 :50px>50
-        var animed=window.setInterval(//產生一個放大的動畫特效:setInterval排程+(1)函式(2)執行間隔時間
-        function(){
-        //設定停止條件
-        if (size<100){window.clearInterval(animed);return} //排程IDanimed 清除排程
-        size=size-1; //數值調完後放進css設定中
-        box.style.width=size+"px";
-        box.style.height=size+"px";
-        },1)  //每0.02秒執行一次函式
-        }
-	
-        </script> 
 
 </head>
 <body>
@@ -142,7 +108,7 @@
         <div class="box2" onclick="location.href='加入我們.html'">加入我們</div>
     </header>
     <div class="float"><!--漂浮小盒子1-->
-        <img src="未命名.png">
+        <img src="9優惠.png"> 
     </div> 
     <div class="float2"><!--漂浮小盒子2-->
         <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/67671346_2507707969279641_6272034196542193664_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=7YsKk72yz3IAX9Lfp_J&_nc_ht=scontent-tpe1-1.xx&oh=3017f0dbcf75933a3019646cc4e1d512&oe=60919B8D">
@@ -153,14 +119,16 @@
 
 
     <!--下方圖片-->
-    <section >
-        <img src="https://picsum.photos/300/300?random=10" id="box1" onmouseover="show(1)" onmouseout="showout(1)" >
-        <img src="https://picsum.photos/300/300?random=20" id="box2" onmouseover="show(2)" onmouseout="showout(2)">
-        <img src="https://picsum.photos/300/300?random=30" id="box3" onmouseover="show(3)" onmouseout="showout(3)">
-        <img src="https://picsum.photos/300/300?random=40" id="box4" onmouseover="show(4)" onmouseout="showout(4)">
-        <img src="https://picsum.photos/300/300?random=50" id="box5" onmouseover="show(5)" onmouseout="showout(5)">
-        <img src="https://picsum.photos/300/300?random=30" id="box6" onmouseover="show(6)" onmouseout="showout(6)">
-        <img src="https://picsum.photos/300/300?random=40" id="box7" onmouseover="show(7)" onmouseout="showout(7)" >
+    <section>
+        <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t1.6435-9/120416781_3540844405965987_2587868307630417449_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=YahAFyHKtSgAX_oHtnl&_nc_ht=scontent.frmq2-2.fna&oh=c538cf6df7b94a6c1e4daf28cdc7af28&oe=60945100" id="box1" onmouseover="show(1)" onmouseout="showout(1)" >
+        <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/119206413_3486974801352948_5836791474640803795_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=730e14&_nc_ohc=o4c7WePHXJ4AX8ncgym&_nc_ht=scontent.frmq2-1.fna&oh=b46dcc029a62b1be1dc4d153aa915d20&oe=6092F83F" id="box2" onmouseover="show(2)" onmouseout="showout(2)">
+        <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/111499240_3321053281278435_3331263958232784066_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_ohc=Ug3WTLeUY2oAX8pdTeB&_nc_ht=scontent.frmq2-1.fna&oh=5fd250bf268e797a16abf80caec656a6&oe=60931C26" id="box3" onmouseover="show(3)" onmouseout="showout(3)">
+        <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/103578259_3228582530525511_1589877332599486569_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_ohc=J1M8RIPJ644AX99NAvt&_nc_ht=scontent.frmq2-1.fna&oh=477d6a4188bc1e47deb33b579c104900&oe=6090EF5F" id="box4" onmouseover="show(4)" onmouseout="showout(4)">
+        <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/69704542_2580921358624968_922106964232634368_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=s7xNWB8X3TsAX9inEL9&_nc_ht=scontent.frmq2-1.fna&oh=f2c7642e13aba11a418e2488614a6b1b&oe=60936121" id="box5" onmouseover="show(5)" onmouseout="showout(5)">
+        <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/130981748_3772774922772933_8626633516913586159_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=730e14&_nc_ohc=BqdMtx0OmH8AX_RZ-1j&_nc_ht=scontent-tpe1-1.xx&oh=d010c53eece1a73760be80eae874f0cd&oe=6091C93E" id="box6" onmouseover="show(6)" onmouseout="showout(6)">
+        <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t1.6435-9/103411447_3206826242701140_3612311721724009028_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=730e14&_nc_ohc=Z2rY09hxzEoAX-rxtcz&_nc_ht=scontent.frmq2-2.fna&oh=e614356b2805f798d3bae909e580b761&oe=6090C8CD" id="box7" onmouseover="show(7)" onmouseout="showout(7)" >
+        <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t1.6435-9/120416781_3540844405965987_2587868307630417449_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=YahAFyHKtSgAX_oHtnl&_nc_ht=scontent.frmq2-2.fna&oh=c538cf6df7b94a6c1e4daf28cdc7af28&oe=60945100" id="box1" onmouseover="show(1)" onmouseout="showout(1)" >
+        <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/119206413_3486974801352948_5836791474640803795_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=730e14&_nc_ohc=o4c7WePHXJ4AX8ncgym&_nc_ht=scontent.frmq2-1.fna&oh=b46dcc029a62b1be1dc4d153aa915d20&oe=6092F83F" id="box2" onmouseover="show(2)" onmouseout="showout(2)">
     </section>
 
 
@@ -172,9 +140,14 @@
         <img  src="whatsapp.png">
         <img  src="youtube.png">
         </div>
-        <div class="num">連絡電話：04-24562158
+        <div class="num">連絡電話：04-2380-8217<i class="fas fa-mug-hot"></i>
+            <span>　　</span> 
+        聯絡信箱：anapplegreen.coffee@gmail.com<i class="fas fa-mug-hot"></i>
+
         </div>
     </nav>
     <footer></footer>
+    <!--icon-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
 </body>
 </html>
