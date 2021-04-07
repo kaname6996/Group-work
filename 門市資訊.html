@@ -138,13 +138,13 @@
     <article><!--地圖+門市資料-->
         
         <div>
-            <h2 id="01">O1門市</h2>
-            <img  id="zoom_02" src="黎明店小.jpg" data-zoom-image="黎明店.jpg">
+            <h2 id="01">黎明門市</h2>
+            <img  id="zoom_03" src="黎明店小.jpg" data-zoom-image="黎明店.jpg">
             <div class="address">
-                門市名稱：OOOO </br>
-                門市電話：OOOO-OOOO </br>
-                門市地址：OOOO-OOOO </br>
-                營業時間：OOOO-OOOO </br>
+                門市名稱：黎明門市 </br>
+                門市電話：+886423808217 </br>
+                門市地址：408台中市南屯區黎明路二段209號 </br>
+                營業時間：08:00-20:00 </br>
                 其他服務：無線網路</br>
             </div>
         </div>
@@ -180,7 +180,9 @@
 				zoomWindowFadeOut: 750
 			});
 		}
+		zoom($('#zoom_01'), "inner", "cursor");
 		zoom($('#zoom_02'), "window", "crosshair");
+		zoom($('#zoom_03'), "lens", "default");
 	</script>   
     
     
