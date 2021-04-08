@@ -7,6 +7,9 @@
     <title>蘋果綠咖啡</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+        <!--icon-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
     <!--放大鏡-->
@@ -33,6 +36,7 @@
     <style>
         body {margin:0px;/*對齊網頁上緣*/
             font-family: 'Noto Serif TC', serif; 
+            max-width: 100vw;
         } 
 
         /*上方黑線*/
@@ -96,7 +100,9 @@
             }
         .box2>a{width: 100%;height: 100%;}
         .box2:hover{background-color:black;color: white;cursor: pointer;}
-
+        
+        /*背景*/
+        .img>.pic{position: fixed;z-index: -1;margin-bottom: 40px;width:80vw;height: 100vh;margin-left:10vw;}
         
         /*漂浮小盒子1*/
         .float>img{width:58px;height:432px;
@@ -140,8 +146,11 @@
     </div> 
     <div class="float2"><!--漂浮小盒子2-->
         <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/67671346_2507707969279641_6272034196542193664_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=7YsKk72yz3IAX9Lfp_J&_nc_ht=scontent-tpe1-1.xx&oh=3017f0dbcf75933a3019646cc4e1d512&oe=60919B8D">
+    <!--背景-->
     </div> 
-
+    <div class="img">    
+        <img class="pic" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/72774396_2643182002398903_4550756259451633664_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=730e14&_nc_ohc=3rCMppg1MkMAX9gTss9&_nc_ht=scontent-tpe1-1.xx&oh=06d3b2a48001a7f514d1ab12bd97d10c&oe=6094A506">
+    </div>
     <article><!--地圖+門市資料-->
         
         <div>
@@ -193,16 +202,22 @@
 	</script>   
     
     
-    <nav> 
+    <nav> <!--聯絡方式-->
         <div>
         <img  src="facebook.png">
         <img  src="instagram.png">
         <img  src="whatsapp.png">
         <img  src="youtube.png">
         </div>
-        <div class="num">連絡電話：04-24562158
+        <div class="num">連絡電話：04-2380-8217<i class="fas fa-mug-hot"></i>
+            <span>　　</span> 
+        聯絡信箱：anapplegreen.coffee@gmail.com<i class="fas fa-mug-hot"></i>
+
         </div>
     </nav>
     <footer></footer>
+        <!--icon-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+
 </body>
 </html>
