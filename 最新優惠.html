@@ -7,9 +7,13 @@
     <title>蘋果綠咖啡</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
-        <!--icon-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-
+    <!--css.js-->
+    <link rel="stylesheet" href="./index.css ">
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!--boot-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
     <script type="text/javascript" >
@@ -20,15 +24,11 @@
             });
             });
     </script>
-    
     <style>
         body {margin:0px;font-family: 'Noto Serif TC', serif;} /*對齊網頁上緣*/
 
         /*上方黑線*/
-        .box{background-color: rgb(27, 66, 24);height: 10px;}
-        /*中間圖片*/
-        .pic{margin-left:auto;margin:auto;display:block;margin-bottom: 40px;} /*圖片置中*/
-        
+        .box{background-color: rgb(27, 66, 24);height: 10px;}        
         /*選單*/
         header{
             display:flex;
@@ -58,7 +58,9 @@
         .box2>a{width: 100%;height: 100%;}
         .box2:hover{background-color:black;color: white;cursor: pointer;}
 
-        
+        /*article中間*/
+        article{display: flex;justify-content: center;text-align: center;align-items: center;margin:0;}
+
         /*漂浮小盒子1*/
         .float>img{width:58px;height:432px;
         position:fixed;right: 10px;top:60px}
@@ -85,7 +87,7 @@
         <div class="box2" id="flip" >全部商品</div>
         <div class="panel">
         <p onclick="location.href='全部商品.html'">查看菜單</p>
-        <p onclick="location.href='新品介紹.html'">最新商品</p>
+        <p onclick="location.href='最新優惠.html'">最新優惠</p>
         </div>
         <div class="box2" onclick="location.href='門市資訊.html'">門市資訊</div>
         <div class="box2" onclick="location.href='企業責任.html'">企業責任</div>
@@ -98,9 +100,10 @@
     <div class="float2"><!--漂浮小盒子2-->
         <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/67671346_2507707969279641_6272034196542193664_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=7YsKk72yz3IAX9Lfp_J&_nc_ht=scontent-tpe1-1.xx&oh=3017f0dbcf75933a3019646cc4e1d512&oe=60919B8D">
     </div> 
-    <article><!--底圖-->
-    <img class="pic" src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/93044/starb.jpg_1140x855.jpg">
+    <article><!--中間-->
     </article>
+    <div id="slider"></div>
+
     <nav> <!--聯絡方式-->
         <div>
         <img  src="facebook.png">
@@ -119,4 +122,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
 
 </body>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="./jquery.slider.js"></script>
+<script>
+    $("#slider").sliderImg({
+        imgs: [
+            "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/159068363_3985473321503091_5068165981211801786_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=adK0i7atN64AX8n8oS7&_nc_ht=scontent-tpe1-1.xx&oh=9778c8de8b8bc435b81306ab54177f98&oe=609734CE",
+            "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/145369177_3887521867964904_1139527315778350060_n.png?_nc_cat=101&ccb=1-3&_nc_sid=730e14&_nc_ohc=vHAtkHaS8N4AX-ybmM_&_nc_ht=scontent-tpe1-1.xx&oh=2a2d1d5272876d05977b407021d97d09&oe=60964346", 
+            "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/143288287_3880008005382957_2841986337079123289_n.png?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=5N8pTpygzOwAX90VimY&_nc_ht=scontent-tpe1-1.xx&oh=6a13dbf5180a4f2fc0d4e780bc0aaf26&oe=60939818", 
+            "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/144013519_3880007955382962_9153129865215554196_n.png?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=uNTFSqCNV58AX9PW00d&_nc_ht=scontent-tpe1-1.xx&oh=93e61602c84dba65eec14ae72fd370c8&oe=60963512", 
+            "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/133301649_3791767030873722_5917976136042221629_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_ohc=mlO4eUXlZ68AX-UPWxB&_nc_ht=scontent-tpe1-1.xx&oh=b782df51b79b0be993413b8bc6e01e0b&oe=60954DE0",
+            "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/107871290_3293413594042404_2543079329874255603_n.png?_nc_cat=100&ccb=1-3&_nc_sid=730e14&_nc_ohc=ehuAmQ2WFkIAX8kf2K2&_nc_ht=scontent-tpe1-1.xx&oh=00dd16d1a2805e7df75d91c40a3c4bc6&oe=609571CC",
+            "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/105908155_3274191085964655_4949222430375055333_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=banH3yItUlEAX96WqsL&_nc_ht=scontent-tpe1-1.xx&oh=2660382ae783ac874d87250a7bb5d97a&oe=60945D85"
+        ],
+    });
+
+</script>
 </html>
