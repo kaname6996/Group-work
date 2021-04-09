@@ -5,7 +5,7 @@ $(function ($) {
             container: "slider", // 轮播容器
             imgs: [],
             duration: "normal", // 轮播时长
-            delay: 2000, // 延迟
+            delay: 6000, // 延迟
             direction: "left", // 自动轮播方向
             auto:true, // 是否自动轮播
             arrows: true, // 是否显示左右箭头
