@@ -10,7 +10,6 @@
         <!--icon-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
-   
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
     <script type="text/javascript" >
@@ -21,6 +20,7 @@
             });
             });
     </script>
+
 
     <style>
         body {margin:0px;font-family: 'Noto Serif TC', serif;} /*對齊網頁上緣*/
@@ -58,8 +58,8 @@
             }
         .box2>a{width: 100%;height: 100%;}
         .box2:hover{background-color:black;color: white;cursor: pointer;}
-        
-        /*加入我們*/
+
+        /*客服專區*/
         article>h2{
             text-align: center;
             color: rgb(255, 255, 255);
@@ -68,36 +68,25 @@
             text-shadow: rgb(122, 122, 122) 4px 3px 0px;
             margin-left: 20vw;margin-right:20vw ;
                 }
-        article table{
-            margin-left: auto;
-            margin-right: auto;
+        #question{
+            display: grid;
+            grid-template-columns: [c1] 100px [c2] 350px [c3] 100px [c4] 350px;
+            grid-template-rows: repeat(9);
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-left: 400px;
         }
-        table{
-            border:1px solid;
-            border-width: 4px;
-            border-color: rgba(27, 66, 24, 0.808);
-            border-radius:1ch;
-            width: 800px;
-            }
-        .c1{
-            font-size: 20px;
+        .q7{
+            grid-column: 2 / 5;
         }
-        tbody{
-            background-color: rgba(104, 153, 102, 0.5);
-        }
-        tbody>tr>td{
-            border-radius:1ch;
-        }
-        .t1{
-            color: honeydew;
-            background-color: rgba(66, 92, 62, 0.562);
+        .button{
+            grid-column: 1 / 5;
             text-align: center;
         }
-
+        
         /*漂浮小盒子1*/
         .float>img{width:58px;height:432px;
         position:fixed;right: 10px;top:60px}
-
         /*漂浮小盒子2*/
         .float2>img{width:130px;height:130px;
         position:absolute;left: 10px;top:20px;;}
@@ -130,7 +119,7 @@
 <body>
     <div class="box"></div><!--上邊黑線-->
 
-    
+
     <header><!--目錄-->
         <div class="box2" onclick="location.href='index.html'">首頁</div>
         <div class="box2" id="flip" >全部商品</div>
@@ -151,49 +140,65 @@
         <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/67671346_2507707969279641_6272034196542193664_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=7YsKk72yz3IAX9Lfp_J&_nc_ht=scontent-tpe1-1.xx&oh=3017f0dbcf75933a3019646cc4e1d512&oe=60919B8D">
     </div> 
     <article><!--中間文章-->
-        <h2>加入我們</h2>
-
-        <table>
-            <caption class="c1">徵才公告</caption>
-            <tbody>
-                <tr>
-                    <td class="t1">職務名稱</td>
-                    <td>早班正職</td>
-                </tr>
-                <tr>
-                    <td class="t1">需求人數</td>
-                    <td>1-2人</td>
-                </tr>
-                <tr>
-                    <td class="t1">職類</td>
-                    <td>門市店員/餐飲服務生</td>
-                </tr>
-                <tr>
-                    <td class="t1">職務說明</td>
-                    <td>
-                        我們重視與夥伴之間的真誠，期盼一起用心打拼開創未來。<br>
-                        讓我們將熱忱傳遞到顧客心中，每一天都是美好的APPLE DAY!<br><br>
-                        
-                        工作內容： 備餐、點餐、調製飲品為基本首要。<br><br>
-                        
-                        1.凡事精益求精的持續進步，維持店內飲品輕食品質。<br>
-                        2.對於團隊進步有想法及熱情的你，能適時協助夥伴共同完成目標。<br>
-                        3.愛乾淨，有禮貌，保持工作環境及店內整潔。<br>
-                        4.活潑且不害臊、勇於與顧客熱情的交流。<br>
-                        5.對餐飲有熱情，努力且有上進心<br><br>
-                        
-                        正職員工享有以下福利：<br>
-                        1.勞健保及6%退休金提撥<br>
-                        2.團體意外傷害保險<br>
-                        3.月休八天<br>
-                        4.尾牙代金(符合資格者可領取)<br>
-                        5.特休假(依勞動法規)
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-            
+        <h2>客服專區</h2>
+        <div class="container-fluid"></div>
+        <div id="question">
+            <div>問題分類</div>
+            <div>
+                <form>
+                    <select name="YourQuestion">
+                    　<option>請選擇分類</option>
+                    　<option value="1">餐點諮詢</option>
+                    　<option value="2">用餐問題諮詢</option>
+                    　<option value="3">服務心得回饋</option>
+                    　<option value="4">其他</option>
+                    </select>
+                </form>
+            </div>
+            <div>店別</div>
+            <div>
+                <select name="Shop">
+                    　<option>請選擇店別</option>
+                    　<option value="5">黎明門市</option>
+                    　<option value="6">學府門市</option>
+                    　<option value="7">勝利門市</option>
+                    </select>
+                </form>
+            </div>
+            <div><br></div><div></div><div></div><div></div>
+            <div>姓名</div>
+            <div>
+                <form>
+                    <input type="text" name="name">
+                    <input type="radio" name="location" value="Mr"> 先生
+                    <input type="radio" name="location" value="Ms"> 小姐
+                </form>
+            </div>
+            <div>連絡電話</div>
+            <div>
+                <input type="text" name="phone">
+            </div>
+            <div><br></div><div></div><div></div><div></div>
+            <div>行動電話</div>
+            <div>
+                <input type="text" name="telephone">
+            </div>
+            <div>電子信箱</div>
+            <div>
+                <input type="text" name="email">
+            </div>
+            <div><br></div><div></div><div></div><div></div>
+            <div>需求說明</div>
+            <div class="q7">
+                <textarea name="Content" style="width: 610px; height: 100px;"></textarea>
+            </div>
+            <div><br></div><div></div><div></div><div></div>
+            <div class="button">
+                <button type="button">確認送出</button>
+            </div>
         </div>
+
+
     </article>
     <nav> <!--聯絡方式-->
         <div>
