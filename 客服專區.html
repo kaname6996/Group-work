@@ -7,8 +7,8 @@
     <title> 🍏 蘋果綠咖啡 ☕ </title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
-        <!--icon-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
@@ -55,7 +55,7 @@
             display:inline-block; /*一行多div*/
             text-align: center; /*水平對齊*/
             line-height: 50px; /*置中*/
-            }
+        }
         .box2>a{width: 100%;height: 100%;}
         .box2:hover{background-color:black;color: white;cursor: pointer;}
 
@@ -67,21 +67,28 @@
             background-color: rgba(27, 66, 24, 0.808);
             text-shadow: rgb(122, 122, 122) 4px 3px 0px;
             margin-left: 20vw;margin-right:20vw ;
-                }
+        }
         #question{
             display: grid;
             grid-template-columns: [c1] 100px [c2] 350px [c3] 100px [c4] 350px;
-            grid-template-rows: repeat(9);
-            padding-top: 100px;
-            padding-bottom: 100px;
+            grid-template-rows: repeat(6);
+            padding-top: 30px;
+            padding-bottom: 95px;
             padding-left: 400px;
+            font-size: 20px;
+            color: rgba(14, 48, 11, 0.87);
         }
         .q7{
             grid-column: 2 / 5;
         }
         .button{
             grid-column: 1 / 5;
-            text-align: center;
+            margin-left: 515px;
+            background-color: rgba(207, 204, 20, 0.897);
+            color: rgba(27, 66, 24, 0.808);
+            border: none;
+            font-size: 20px;
+            width: 100px;
         }
         
         /*漂浮小盒子1*/
@@ -90,6 +97,9 @@
         /*漂浮小盒子2*/
         .float2>img{width:130px;height:130px;
         position:absolute;left: 10px;top:20px;;}
+
+        /*背景*/
+        .img>.pic{position: fixed;z-index: -1;margin-bottom: 40px;width:80vw;height: 100vh;margin-left:10vw;opacity: 0.7;}
 
         /*聯絡方法*/
         nav{background-color: rgba(165, 150, 150, 0.144);padding-left: 200px;display: flex;}
@@ -139,6 +149,11 @@
         <div class="float2"><!--漂浮小盒子2-->
         <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/67671346_2507707969279641_6272034196542193664_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=7YsKk72yz3IAX9Lfp_J&_nc_ht=scontent-tpe1-1.xx&oh=3017f0dbcf75933a3019646cc4e1d512&oe=60919B8D">
     </div> 
+        <!--背景-->
+    </div> 
+    <div class="img">    
+        <img class="pic" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/72774396_2643182002398903_4550756259451633664_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=730e14&_nc_ohc=3rCMppg1MkMAX9gTss9&_nc_ht=scontent-tpe1-1.xx&oh=06d3b2a48001a7f514d1ab12bd97d10c&oe=6094A506">
+    </div>
     <article><!--中間文章-->
         <h2>客服專區</h2>
         <div class="container-fluid"></div>
@@ -146,7 +161,7 @@
             <div>問題分類</div>
             <div>
                 <form>
-                    <select name="YourQuestion">
+                    <select name="YourQuestion" style="height: 30px;">
                     　<option>請選擇分類</option>
                     　<option value="1">餐點諮詢</option>
                     　<option value="2">用餐問題諮詢</option>
@@ -157,7 +172,7 @@
             </div>
             <div>店別</div>
             <div>
-                <select name="Shop">
+                <select name="Shop" style="height: 30px;">
                     　<option>請選擇店別</option>
                     　<option value="5">黎明門市</option>
                     　<option value="6">學府門市</option>
@@ -168,33 +183,30 @@
             <div><br></div><div></div><div></div><div></div>
             <div>姓名</div>
             <div>
-                <form>
-                    <input type="text" name="name">
+                <form >
+                    <input type="text" name="name" style="height: 22px;">
                     <input type="radio" name="location" value="Mr"> 先生
                     <input type="radio" name="location" value="Ms"> 小姐
                 </form>
             </div>
             <div>連絡電話</div>
             <div>
-                <input type="text" name="phone">
+                <input type="text" name="phone" style="height: 22px;">
             </div>
             <div><br></div><div></div><div></div><div></div>
             <div>行動電話</div>
             <div>
-                <input type="text" name="telephone">
+                <input type="text" name="telephone" style="height: 22px;">
             </div>
             <div>電子信箱</div>
             <div>
-                <input type="text" name="email">
+                <input type="text" name="email" style="height: 22px;">
             </div>
             <div><br></div><div></div><div></div><div></div>
             <div>需求說明</div>
             <div class="q7">
-                <textarea name="Content" style="width: 610px; height: 100px;"></textarea>
-            </div>
-            <div><br></div><div></div><div></div><div></div>
-            <div class="button">
-                <button type="button">確認送出</button>
+                <textarea name="Content" style="width: 610px; height: 100px;"></textarea><br>
+                <button class="button" type="button" >確認送出</button>
             </div>
         </div>
 
