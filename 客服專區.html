@@ -60,6 +60,13 @@
         .box2:hover{background-color:black;color: white;cursor: pointer;}
 
         /*客服專區*/
+        article{
+            display: flex;
+            flex-direction: column
+            ;
+        }
+
+
         article>h2{
             text-align: center;
             color: rgb(255, 255, 255);
@@ -69,14 +76,19 @@
             margin-left: 20vw;margin-right:20vw ;
         }
         #question{
+            width: 60vw;
             display: grid;
             grid-template-columns: [c1] 100px [c2] 350px [c3] 100px [c4] 350px;
             grid-template-rows: repeat(6);
             padding-top: 30px;
             padding-bottom: 95px;
-            padding-left: 400px;
             font-size: 20px;
             color: rgba(14, 48, 11, 0.87);
+            align-self: center;
+        }
+
+        #mu{
+            text-align: center;
         }
         .q7{
             grid-column: 2 / 5;
@@ -146,24 +158,24 @@
         <div class="box2" onclick="location.href='客服專區.html'">客服專區</div>
     </header>
     <div class="float"><!--漂浮小盒子1-->
-        <img src="9優惠.png"> 
+        <img src="media/9優惠.png"> 
     </div> 
         <div class="float2"><!--漂浮小盒子2-->
-            <img src="logo.jpg">
+            <img src="media/logo.jpg">
         </div> 
         <!--背景-->
     </div> 
     <div class="img">    
-        <img class="pic" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/72774396_2643182002398903_4550756259451633664_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=730e14&_nc_ohc=3rCMppg1MkMAX9gTss9&_nc_ht=scontent-tpe1-1.xx&oh=06d3b2a48001a7f514d1ab12bd97d10c&oe=6094A506">
+        <img class="pic" src="media/全商背景.jpg">
     </div>
     <article><!--中間文章-->
         <h2>客服專區</h2>
         <div class="container-fluid"></div>
         <div id="question">
-            <div>問題分類</div>
+            <div id='mu'>問題分類</div>
             <div>
                 <form>
-                    <select name="YourQuestion" style="height: 30px;">
+                    <select name="YourQuestion" style="height: 30px;width: 15vw">
                     　<option>請選擇分類</option>
                     　<option value="1">餐點諮詢</option>
                     　<option value="2">用餐問題諮詢</option>
@@ -172,9 +184,9 @@
                     </select>
                 </form>
             </div>
-            <div>店別</div>
+            <div id='mu'>店別</div>
             <div>
-                <select name="Shop" style="height: 30px;">
+                <select name="Shop" style="height: 30px;width: 15vw">
                     　<option>請選擇店別</option>
                     　<option value="5">黎明門市</option>
                     　<option value="6">學府門市</option>
@@ -183,31 +195,31 @@
                 </form>
             </div>
             <div><br></div><div></div><div></div><div></div>
-            <div>姓名</div>
+            <div id='mu'>姓名</div>
             <div>
                 <form >
-                    <input type="text" name="name" style="height: 22px;">
+                    <input type="text" name="name" style="height: 22px;width: 12vw">
                     <input type="radio" name="location" value="Mr"> 先生
                     <input type="radio" name="location" value="Ms"> 小姐
                 </form>
             </div>
-            <div>連絡電話</div>
+            <div id='mu'>連絡電話</div>
             <div>
-                <input type="text" name="phone" style="height: 22px;">
+                <input type="text" name="phone" style="height: 22px;width: 15vw;">
             </div>
             <div><br></div><div></div><div></div><div></div>
-            <div>行動電話</div>
+            <div id='mu'>行動電話</div>
             <div>
-                <input type="text" name="telephone" style="height: 22px;">
+                <input type="text" name="telephone" style="height: 22px;width: 15vw">
             </div>
-            <div>電子信箱</div>
+            <div id='mu'>電子信箱</div>
             <div>
-                <input type="text" name="email" style="height: 22px;">
+                <input type="text" name="email" style="height: 22px;width: 15vw">
             </div>
             <div><br></div><div></div><div></div><div></div>
-            <div>需求說明</div>
+            <div id='mu'>需求說明</div>
             <div class="q7">
-                <textarea name="Content" style="width: 610px; height: 100px;"></textarea><br>
+                <textarea name="Content" style="width: 50vw; height: 100px;"></textarea><br>
                 <button class="button" type="button" ><b>確認送出</b></button>
             </div>
         </div>
@@ -216,10 +228,10 @@
     </article>
     <nav> <!--聯絡方式-->
         <div>
-        <img  src="facebook.png">
-        <img  src="instagram.png">
-        <img  src="whatsapp.png">
-        <img  src="youtube.png">
+        <img  src="media/facebook.png">
+        <img  src="media/instagram.png">
+        <img  src="media/whatsapp.png">
+        <img  src="media/youtube.png">
         </div>
             <span>　　</span> 
             <div class="num">連絡電話：04-2380-8217<i class="fas fa-mug-hot"></i>
@@ -230,7 +242,7 @@
     <footer></footer>
         <!--游標-->
     
-        <img class="apple" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/67671346_2507707969279641_6272034196542193664_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=myTcjz9oZCoAX-4qbBi&_nc_ht=scontent-tpe1-1.xx&oh=49d1e5f01fca24a8f8ac86f3a0427c9e&oe=6095900D">
+        <img class="apple" src="media/logo.jpg">
 
         <!--icon-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
