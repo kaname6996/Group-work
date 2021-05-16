@@ -18,6 +18,32 @@
             $("#flip").click(function(){
             $(".panel").slideToggle("slow");
             });
+
+            //滾動事件
+            //計算高度
+            var $topHe =$('.box').height()+62
+            var $scWidth =$(window).width()
+            $(window).scroll(function(){
+                let $scrollAll =$(this).scrollTop()
+                if ($scrollAll>=$topHe){
+                    $('header').css({
+                        position:'fixed',
+                        top:0,
+                        left:10,
+                        width:$scWidth
+                    })
+                }
+                else{
+                    $('header').css({
+                        position:'static',
+                        top:0,
+                        left:10,
+                        width:$scWidth
+                    })                
+                }
+            })
+
+
             });
     </script>
 
